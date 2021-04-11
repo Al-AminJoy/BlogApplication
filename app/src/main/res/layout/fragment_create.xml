@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".view.fragement.CreateFragment">
+
+        <CheckBox
+            android:id="@+id/cb_business"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Business"
+            app:layout_constraintStart_toStartOf="@id/guidelineCenter"
+            app:layout_constraintTop_toTopOf="@id/tvCategory" />
+
+        <CheckBox
+            android:id="@+id/cb_lifestyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin2dp"
+            android:text="Lifestyle"
+            app:layout_constraintStart_toStartOf="@id/guidelineCenter"
+            app:layout_constraintTop_toBottomOf="@+id/cb_business" />
+
+        <CheckBox
+            android:id="@+id/cb_entertainment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin2dp"
+            android:text="Entertainment"
+            app:layout_constraintStart_toStartOf="@id/guidelineCenter"
+            app:layout_constraintTop_toBottomOf="@+id/cb_lifestyle" />
+
+        <CheckBox
+            android:id="@+id/cb_productivity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin2dp"
+            android:text="Productivity"
+            app:layout_constraintStart_toStartOf="@id/guidelineCenter"
+            app:layout_constraintTop_toBottomOf="@+id/cb_entertainment" />
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="start"
+            android:text="Title : "
+            android:textColor="@color/black"
+            android:textSize="@dimen/textSizeM"
+            app:layout_constraintEnd_toEndOf="@id/guidelineCenter"
+            app:layout_constraintStart_toStartOf="@id/guidelineStart"
+            app:layout_constraintTop_toTopOf="@id/guidelineTop" />
+
+        <TextView
+            android:id="@+id/tvDescription"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin8dp"
+            android:gravity="start"
+            android:text="Description : "
+            android:textColor="@color/black"
+            android:textSize="@dimen/textSizeM"
+            app:layout_constraintEnd_toEndOf="@id/guidelineCenter"
+            app:layout_constraintStart_toStartOf="@id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@id/etTitle" />
+
+        <TextView
+            android:id="@+id/tvCategory"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin8dp"
+            android:gravity="start"
+            android:text="Category : "
+            android:textColor="@color/black"
+            android:textSize="@dimen/textSizeM"
+            app:layout_constraintEnd_toEndOf="@id/guidelineCenter"
+            app:layout_constraintStart_toStartOf="@id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@id/etDescription" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/title_hint"
+            android:textColor="@color/black"
+            app:layout_constraintBottom_toBottomOf="@id/tvTitle"
+            app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+            app:layout_constraintStart_toStartOf="@id/guidelineCenter"
+            app:layout_constraintTop_toTopOf="@id/tvTitle" />
+
+        <androidx.appcompat.widget.AppCompatEditText
+            android:id="@+id/etDescription"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:hint="@string/description_hint"
+            android:lines="4"
+            android:textColor="@color/black"
+            app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+            app:layout_constraintStart_toStartOf="@id/guidelineCenter"
+            app:layout_constraintTop_toTopOf="@id/tvDescription" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineCenter"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent=".40" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineStart"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent=".05" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent=".95" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineTop"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_percent=".02" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/bt_create"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/margin8dp"
+            android:backgroundTint="@color/teal_700"
+            android:text="Add"
+            android:textSize="@dimen/textSizeM"
+            app:layout_constraintEnd_toEndOf="@id/guidelineEnd"
+            app:layout_constraintStart_toStartOf="@id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@id/cb_productivity"
+            app:rippleColor="@color/teal_200" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
+
